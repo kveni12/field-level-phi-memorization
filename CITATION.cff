@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the paper when using this code or synthetic corpus."
+title: "Not All Information is the Same: Characterizing Field-Level PHI Memorization in LLMs"
+type: software
+authors:
+  - family-names: Agarwal
+    given-names: Isha
+  - family-names: Parvataneni
+    given-names: Krishnaveni
+  - family-names: Parent
+    given-names: Cassandra
+  - family-names: Ghassemi
+    given-names: Marzyeh
+version: 1.0.0
+date-released: 2026-11-19
+repository-code: "https://github.com/kveni12/field-level-phi-memorization"
+license: MIT

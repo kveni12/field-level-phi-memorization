@@ -1,0 +1,246 @@
+{
+  "source_revision": "ce758420ef24939e5ccf8d768854195153a7363f",
+  "files": {
+    "src/memo_diff/__init__.py": {
+      "source": "src/memo_diff/__init__.py",
+      "sha256": "0a027a00d7221ae611c2837a35cef16c0ff02b7b54102eaa762d4f9795678933"
+    },
+    "src/memo_diff/dataset/generate.py": {
+      "source": "src/memo_diff/dataset/generate.py",
+      "sha256": "ec01127ef4755de02fe8373c38feb796382b5cd5c436e76225d7f9cdde70e870"
+    },
+    "src/memo_diff/dataset/pools.py": {
+      "source": "src/memo_diff/dataset/pools.py",
+      "sha256": "d20bc1b605231e2e1748b941adfeeb70d7286a1c32e35e33bb1a2406185ffa00"
+    },
+    "src/memo_diff/dataset/names.py": {
+      "source": "src/memo_diff/dataset/names.py",
+      "sha256": "8d5d8d912952e7d7e0bb9c88eca5e57142c09f16e9841400fa6c154cbc0263d7"
+    },
+    "src/memo_diff/dataset/rng.py": {
+      "source": "src/memo_diff/dataset/rng.py",
+      "sha256": "eaabb85f6d46b32017424f79b59b3a22e752645a36c99df0b1275a8224a25160"
+    },
+    "src/memo_diff/dataset/render.py": {
+      "source": "src/memo_diff/dataset/render.py",
+      "sha256": "24ffd066681fadfc5fdf667592ee1c3b4d1942f575e23a4b638f60720d7358d6"
+    },
+    "src/memo_diff/dataset/validate.py": {
+      "source": "src/memo_diff/dataset/validate.py",
+      "sha256": "422af07fc7b1cced368bb8fe701ab8507d8db7b793942f106b18f6b32309c009"
+    },
+    "src/memo_diff/dataset/us_geo.py": {
+      "source": "src/memo_diff/dataset/us_geo.py",
+      "sha256": "7dcbece2800186de833907e9df329e5804231cf4757e3b8a7073a38dfd8953d8"
+    },
+    "src/memo_diff/dataset/luna_pools.py": {
+      "source": "src/memo_diff/dataset/luna_pools.py",
+      "sha256": "b75a8e7eba36d5baccca2561adafa4292b4d2fdb936cb85da1c062df5b6e7cf3"
+    },
+    "src/memo_diff/dataset/openai_client.py": {
+      "source": "src/memo_diff/dataset/openai_client.py",
+      "sha256": "85c1ba32bb8ae783fef64339ab418707e2b686c81963dd95515637a3cb776d43"
+    },
+    "src/memo_diff/dataset/prompts.py": {
+      "source": "src/memo_diff/dataset/prompts.py",
+      "sha256": "537ce1b2b9f27f46825bea67466fafeab61c8baf7fddf35cc7cd1f2b27641905"
+    },
+    "src/memo_diff/dataset/content.py": {
+      "source": "src/memo_diff/dataset/content.py",
+      "source_sha256": "d79db2da1a4a5fc20e2b1af7cecf8ad8d45f5e8725a2f48ad6eca8ff078d0015",
+      "retained_roots": [
+        "DIAGNOSIS_THERAPY"
+      ]
+    },
+    "src/memo_diff/dataset/phi_pools.py": {
+      "source": "src/memo_diff/dataset/phi_pools.py",
+      "source_sha256": "e86330230a80fe265aa177a33661cc1b2cf7859eb006a804cf6ccd274bd6d739",
+      "retained_roots": [
+        "CLINICAL_TWIN_FIELDS",
+        "validate_dossier_text"
+      ]
+    },
+    "src/memo_diff/training/train_sft.py": {
+      "source": "src/memo_diff/training/train_sft.py",
+      "sha256": "3f967da64e845fa96f1a7e7f9443bb4a7e259015edff0f3df6baf0f4afaf9d01"
+    },
+    "src/memo_diff/training/utils.py": {
+      "source": "src/memo_diff/training/utils.py",
+      "sha256": "663762e54a375b51cf55fe2c3be503b32cbf4744bc6910f9fc80874e39b19c35"
+    },
+    "src/memo_diff/training/prefix_attack.py": {
+      "source": "src/memo_diff/training/prefix_attack.py",
+      "sha256": "6272966114ab1cf8cc5aa6530ea0adc24e00103bb60bc4d19d9552990e355dee"
+    },
+    "src/memo_diff/training/data.py": {
+      "source": "src/memo_diff/training/data.py",
+      "source_sha256": "67318d02618bcc46aefb30e437deca903e055de9c64208a9cf490ec738070a41",
+      "retained_roots": [
+        "load_unique_canaries",
+        "pack_canary_epoch",
+        "pad_packed_sequence"
+      ]
+    },
+    "src/memo_diff/analysis/field_retention.py": {
+      "source": "src/memo_diff/analysis/field_retention.py",
+      "sha256": "016deade66304a758033150f59dc324a8060b84e0a141aeb574b7e0336a13130"
+    },
+    "src/memo_diff/analysis/jacobian_lens.py": {
+      "source": "src/memo_diff/analysis/jacobian_lens.py",
+      "sha256": "acbc6b168bc55b4486c15254ed6646701707847b14d1b40280fe109296d07cac"
+    },
+    "src/memo_diff/analysis/paper_fields.py": {
+      "source": "src/memo_diff/analysis/paper_fields.py",
+      "sha256": "d92b0290d9d725bd3dd2521d0150ad746842bd26a3706ff9449f7b4989946ed0"
+    },
+    "src/memo_diff/analysis/primary_figure_fields.py": {
+      "source": "src/memo_diff/analysis/primary_figure_fields.py",
+      "sha256": "de53a832d839d25df2c459c9d23eafbb7863829e44a29e9f7938c25872adcffd"
+    },
+    "src/memo_diff/analysis/cohort.py": {
+      "source": "src/memo_diff/analysis/layer_auroc.py",
+      "source_sha256": "7044d8ee431352e637c27c2dc73e01ff60c4775f64a5a327b1b5f1f43325d9f6",
+      "retained_roots": [
+        "LABELS",
+        "_load_canaries"
+      ]
+    },
+    "src/memo_diff/analysis/model_utils.py": {
+      "source": "src/memo_diff/analysis/logit_lens.py",
+      "source_sha256": "88e89e023413ae166a7560c5cee223461d2f05ba189ec8b3fc4b52ff9c25ff0e",
+      "retained_roots": [
+        "_final_norm_and_head"
+      ]
+    },
+    "src/memo_diff/analysis/field_targets.py": {
+      "source": "src/memo_diff/analysis/field_logit_lens.py",
+      "source_sha256": "9d559b57747c2d513d769688c3483e2ca37ce0513f90e62e720fd6864aa2279b",
+      "retained_roots": [
+        "field_token_spans",
+        "first_token_targets",
+        "reciprocal_rank"
+      ]
+    },
+    "src/memo_diff/analysis/readout.py": {
+      "source": "src/memo_diff/analysis/jlens_threeway.py",
+      "source_sha256": "bd2f31f7c740f70037b19bb7062c84ade04ddb8f7d129d32c46ca2e8a5dce121",
+      "retained_roots": [
+        "load_jacobians_pt",
+        "_lens_logits"
+      ]
+    },
+    "scripts/train_llama_sft.py": {
+      "source": "scripts/train_llama_sft.py",
+      "sha256": "981f9bb414353b0a6fa88fb39dfc95094f75093abe43fa3124ca80736dffe6b0"
+    },
+    "scripts/run_prefix_attack_single.py": {
+      "source": "scripts/run_prefix_attack_single.py",
+      "sha256": "80eb229bf305907dc6ea36d1fac81396a86ccfadee3b29256cacdfc290b5d04a"
+    },
+    "scripts/fit_paper_jacobian_checkpoint.py": {
+      "source": "scripts/fit_paper_jacobian_checkpoint.py",
+      "sha256": "39304a2747e2c3a43f222eb5be64c979649dc098985e4f0e52cba57a6bfde5a5"
+    },
+    "scripts/merge_jacobian_fit_shards.py": {
+      "source": "scripts/merge_jacobian_fit_shards.py",
+      "sha256": "86e974b06b2e95728ebca6f03778694a14c83d81fb59c6c01ddc4e22b8f6c7c9"
+    },
+    "scripts/build_jacobian_fit_corpus.py": {
+      "source": "scripts/build_jacobian_fit_corpus.py",
+      "sha256": "c83e44e19dd4c48f3deceb337f9b1a8c56f2ee38c08735c4236f2d9f905c9e47"
+    },
+    "scripts/plot_prefix_attack_split_panels.py": {
+      "source": "scripts/plot_prefix_attack_split_panels.py",
+      "sha256": "9ef37c94a3bb64a73e8e95f051206a57e8a7b903551777cfe43fbf213f3cebb4"
+    },
+    "scripts/replot_jlens_train_n800_mrr_heatmap.py": {
+      "source": "scripts/replot_jlens_train_n800_mrr_heatmap.py",
+      "sha256": "52416aad9ca36e0e602a7f41235f8b8898e36eea68deb359e9e86462a96bf30c"
+    },
+    "tests/test_field_retention.py": {
+      "source": "tests/test_field_retention.py",
+      "sha256": "95a23027883aaa54fd2df97eb952b75821e60d50fc2faa5849ee4a6e0f38b04d"
+    },
+    "tests/test_twin_dataset_v2.py": {
+      "source": "tests/test_twin_dataset_v2.py",
+      "sha256": "9402c0d54e337a66d1f56bea7ee0a3aa4c3917f0b279849d2572ce3c4281b7d8"
+    },
+    "tests/test_jacobian_lens.py": {
+      "source": "tests/test_jacobian_lens.py",
+      "sha256": "e96457337450dece1fc2c4c761f70d0604367e6b98244e8f51ea3b46d2f57b40"
+    },
+    "tests/test_prefix_attack_char_split.py": {
+      "source": "tests/test_prefix_attack_char_split.py",
+      "sha256": "cda2e4fed7411c3902d9393adb9d59ff47c9413599a0674d12cfd7f5bab15ae2"
+    },
+    "tests/test_prefix_attack_membership.py": {
+      "source": "tests/test_prefix_attack_membership.py",
+      "sha256": "b047928f589d18da777af4d8b1269e8dbb747f1d592efc3dc8554eaaedff02b4"
+    },
+    "tests/test_plot_prefix_attack_by_field.py": {
+      "source": "tests/test_plot_prefix_attack_by_field.py",
+      "sha256": "e36f23502b30a22f9fb82b4c1ebb850b29eaec7c7e67281ef665d194878c6bdf"
+    },
+    "configs/train_llama31_8b_balanced_2k_phi_benign_v2_luna_9f.yaml": {
+      "source": "configs/train_llama31_8b_balanced_2k_phi_benign_v2_luna_9f.yaml",
+      "sha256": "cc16d40e47edaf1a5aa4aa1156aafad9054f33f02252ea25050af9ad1ed4d584"
+    },
+    "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/train_canaries.jsonl": {
+      "source": "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/train_canaries.jsonl",
+      "sha256": "354cd5fd09c2f8b4d2111f35dc2f4a5b94af306983fdbf2a1d11c02108273b7b"
+    },
+    "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/heldout_canaries.jsonl": {
+      "source": "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/heldout_canaries.jsonl",
+      "sha256": "962b386def896f2f8e8ef6d6ab3469fecba1a00a85389bf8f6afee566dfbc052"
+    },
+    "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/pools.json": {
+      "source": "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/pools.json",
+      "sha256": "2eebbc071829d1dbe6875854b9356bb6e97ee268ea7d4cd4bb616c1e93c51b29"
+    },
+    "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/luna_names.json": {
+      "source": "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/luna_names.json",
+      "sha256": "554b9df96b847a21b39a7c7bb202b1edef01be1e65764464a9bfdc2a081fb431"
+    },
+    "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/manifest.json": {
+      "source": "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/manifest.json",
+      "sha256": "6b35a89dce298a949d6c2cac9645cbac0f10a06b1dac55fe88f5575deb7f072d"
+    },
+    "data/jacobian_fit/fineweb_n1000.jsonl": {
+      "source": "data/jacobian_fit/fineweb_n1000.jsonl",
+      "sha256": "358f9acada130d207bfde3e8359edfc720e777e92522cf2efff51beb9fcbb4d0"
+    },
+    "figures/memorization_performance_by_field.png": {
+      "source": "results/single-token-primary-20261112/memorization_performance_by_field.png",
+      "sha256": "b2c2c34c1f11b92f12b30d67183b8e66dc65b1330d4cf84d4ace860e172046f7"
+    },
+    "figures/memorization_performance_by_field.pdf": {
+      "source": "results/single-token-primary-20261112/memorization_performance_by_field.pdf",
+      "sha256": "cb6a5428b68e7d8990bcda39f05c8ab624f0bdf09cfe726afb0e8243dd6cb79c"
+    },
+    "figures/mem_emergence.png": {
+      "source": "results/single-token-primary-20261112/mem_emergence.png",
+      "sha256": "316e624da94a29de764d0edac4ec17758e4107e67b74f11315852a7809aafcad"
+    },
+    "figures/mem_emergence.pdf": {
+      "source": "results/single-token-primary-20261112/mem_emergence.pdf",
+      "sha256": "5ca58980e25dfd1a7e6c4100f612014ff8d8731c81bd968a94f2c063351cc634"
+    },
+    "results/archived/artwork_inputs.json": {
+      "source": "results/single-token-primary-20261112/artwork_inputs.json",
+      "sha256": "cb61a2fe399f6da164d678c8e8b15023580aa13e980d52dca8bdb5394868fe99"
+    },
+    "results/archived/onset_statistics.json": {
+      "source": "figures/figure_jlens_luna_9f_step800_onset_ci.json",
+      "sha256": "20a5001d092a8ff5e7b8d247ddcdb869b0f79c5a6ee05889769a12547f502d35"
+    },
+    "src/memo_diff/analysis/prefix_plotting.py": {
+      "source": "scripts/plot_prefix_attack_by_field.py",
+      "retained_scope": "Only helpers used by the paper prefix panels and their tests."
+    }
+  },
+  "cleanup_notes": [
+    "Removed unused checkpoint-search suites, model-upload utilities, non-paper analysis modules, cluster launch files and manuscript drafts.",
+    "Retained numerical training, prefix-score and Jacobian/readout helpers; repackaged shared helpers without importing experimental modules.",
+    "Added paper-only entry points, exact dataset replay and archived-figure reproduction."
+  ]
+}

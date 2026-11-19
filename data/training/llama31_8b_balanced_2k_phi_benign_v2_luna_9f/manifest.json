@@ -1,0 +1,14 @@
+{
+  "schema_version": "twin_v2_luna_names",
+  "model": "gpt-5.6-luna",
+  "prose_mode": "template",
+  "seed": 42,
+  "n_pairs": 1000,
+  "train_pairs": 800,
+  "pools_path": "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/pools.json",
+  "luna_names_path": "data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/luna_names.json",
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

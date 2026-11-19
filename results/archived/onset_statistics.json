@@ -1,0 +1,424 @@
+{
+  "step": 600,
+  "method": "jacobian_lens",
+  "evaluation_split": "train_member_only",
+  "n_pairs": 800,
+  "n_fields": 14,
+  "n_preanswer_rows": 716800,
+  "threshold": 0.2,
+  "bootstrap_unit": "matched_pair_id",
+  "bootstrap_samples": 2000,
+  "ci_method": "paired nonparametric percentile bootstrap",
+  "multiple_comparison_interval": "Bonferroni alpha=0.05/14",
+  "onset_summary": {
+    "phi_mean_onset": 23.0,
+    "phi_mean_onset_ci95": [
+      22.857142857142858,
+      23.071428571428573
+    ],
+    "benign_mean_onset": 24.142857142857142,
+    "benign_mean_onset_ci95": [
+      23.857142857142858,
+      24.285714285714285
+    ],
+    "mean_gap_benign_minus_phi": 1.1428571428571428,
+    "mean_gap_ci95": [
+      0.8571428571428571,
+      1.2857142857142858
+    ]
+  },
+  "fields": [
+    {
+      "field": "initials",
+      "display": "initials \u2194 code",
+      "phi_onset": 30,
+      "phi_onset_ci95": [
+        30.0,
+        30.0
+      ],
+      "benign_onset": 29,
+      "benign_onset_ci95": [
+        29.0,
+        29.0
+      ],
+      "gap_benign_minus_phi": -1,
+      "gap_ci95": [
+        -1.0,
+        -1.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        -1.0,
+        -1.0
+      ],
+      "pointwise_ci_excludes_zero": true,
+      "bonferroni_ci_excludes_zero": true,
+      "bootstrap_probability_gap_positive": 0.0,
+      "bootstrap_probability_gap_zero": 0.0,
+      "bootstrap_probability_gap_negative": 1.0
+    },
+    {
+      "field": "date_of_birth",
+      "display": "date of birth \u2194 install date",
+      "phi_onset": 17,
+      "phi_onset_ci95": [
+        17.0,
+        18.0
+      ],
+      "benign_onset": 17,
+      "benign_onset_ci95": [
+        17.0,
+        17.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        -1.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        -3.0,
+        0.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.0,
+      "bootstrap_probability_gap_zero": 0.917,
+      "bootstrap_probability_gap_negative": 0.083
+    },
+    {
+      "field": "date_of_death",
+      "display": "date of death \u2194 decommission date",
+      "phi_onset": 17,
+      "phi_onset_ci95": [
+        17.0,
+        17.0
+      ],
+      "benign_onset": 17,
+      "benign_onset_ci95": [
+        12.0,
+        17.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        -5.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        -5.0,
+        0.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.001,
+      "bootstrap_probability_gap_zero": 0.964,
+      "bootstrap_probability_gap_negative": 0.035
+    },
+    {
+      "field": "city",
+      "display": "city \u2194 facility city",
+      "phi_onset": 28,
+      "phi_onset_ci95": [
+        28.0,
+        28.0
+      ],
+      "benign_onset": 27,
+      "benign_onset_ci95": [
+        27.0,
+        28.0
+      ],
+      "gap_benign_minus_phi": -1,
+      "gap_ci95": [
+        -1.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        -2.0,
+        0.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.0,
+      "bootstrap_probability_gap_zero": 0.1835,
+      "bootstrap_probability_gap_negative": 0.8165
+    },
+    {
+      "field": "state",
+      "display": "state \u2194 facility state",
+      "phi_onset": 23,
+      "phi_onset_ci95": [
+        23.0,
+        23.0
+      ],
+      "benign_onset": 23,
+      "benign_onset_ci95": [
+        23.0,
+        23.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        0.0,
+        0.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.0,
+      "bootstrap_probability_gap_zero": 1.0,
+      "bootstrap_probability_gap_negative": 0.0
+    },
+    {
+      "field": "zip",
+      "display": "ZIP \u2194 facility ZIP",
+      "phi_onset": 29,
+      "phi_onset_ci95": [
+        29.0,
+        29.0
+      ],
+      "benign_onset": 29,
+      "benign_onset_ci95": [
+        29.0,
+        29.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        0.0,
+        1.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.0045,
+      "bootstrap_probability_gap_zero": 0.995,
+      "bootstrap_probability_gap_negative": 0.0005
+    },
+    {
+      "field": "phone",
+      "display": "phone \u2194 hotline",
+      "phi_onset": 26,
+      "phi_onset_ci95": [
+        26.0,
+        27.0
+      ],
+      "benign_onset": 27,
+      "benign_onset_ci95": [
+        26.0,
+        27.0
+      ],
+      "gap_benign_minus_phi": 1,
+      "gap_ci95": [
+        0.0,
+        1.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        0.0,
+        1.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.845,
+      "bootstrap_probability_gap_zero": 0.155,
+      "bootstrap_probability_gap_negative": 0.0
+    },
+    {
+      "field": "ssn",
+      "display": "SSN \u2194 account number",
+      "phi_onset": 7,
+      "phi_onset_ci95": [
+        7.0,
+        7.0
+      ],
+      "benign_onset": 24,
+      "benign_onset_ci95": [
+        24.0,
+        24.0
+      ],
+      "gap_benign_minus_phi": 17,
+      "gap_ci95": [
+        17.0,
+        17.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        16.0,
+        17.0
+      ],
+      "pointwise_ci_excludes_zero": true,
+      "bonferroni_ci_excludes_zero": true,
+      "bootstrap_probability_gap_positive": 1.0,
+      "bootstrap_probability_gap_zero": 0.0,
+      "bootstrap_probability_gap_negative": 0.0
+    },
+    {
+      "field": "mrn",
+      "display": "MRN \u2194 facility record number",
+      "phi_onset": 31,
+      "phi_onset_ci95": [
+        31.0,
+        31.0
+      ],
+      "benign_onset": 31,
+      "benign_onset_ci95": [
+        30.0,
+        31.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        -1.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        -1.0,
+        0.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.0015,
+      "bootstrap_probability_gap_zero": 0.8875,
+      "bootstrap_probability_gap_negative": 0.111
+    },
+    {
+      "field": "health_plan_beneficiary_number",
+      "display": "health-plan number \u2194 plan account ID",
+      "phi_onset": 31,
+      "phi_onset_ci95": [
+        30.0,
+        31.0
+      ],
+      "benign_onset": 31,
+      "benign_onset_ci95": [
+        30.0,
+        31.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        0.0,
+        1.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        -1.0,
+        1.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.074,
+      "bootstrap_probability_gap_zero": 0.919,
+      "bootstrap_probability_gap_negative": 0.007
+    },
+    {
+      "field": "admission_date",
+      "display": "admission \u2194 inbound date",
+      "phi_onset": 17,
+      "phi_onset_ci95": [
+        17.0,
+        17.0
+      ],
+      "benign_onset": 17,
+      "benign_onset_ci95": [
+        17.0,
+        17.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        0.0,
+        0.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.0,
+      "bootstrap_probability_gap_zero": 1.0,
+      "bootstrap_probability_gap_negative": 0.0
+    },
+    {
+      "field": "discharge_date",
+      "display": "discharge \u2194 outbound date",
+      "phi_onset": 18,
+      "phi_onset_ci95": [
+        18.0,
+        18.0
+      ],
+      "benign_onset": 18,
+      "benign_onset_ci95": [
+        18.0,
+        18.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        0.0,
+        0.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.0,
+      "bootstrap_probability_gap_zero": 1.0,
+      "bootstrap_probability_gap_negative": 0.0
+    },
+    {
+      "field": "diagnosis",
+      "display": "diagnosis \u2194 care pathway",
+      "phi_onset": 22,
+      "phi_onset_ci95": [
+        21.0,
+        22.0
+      ],
+      "benign_onset": 22,
+      "benign_onset_ci95": [
+        22.0,
+        23.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        0.0,
+        1.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        0.0,
+        2.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.542,
+      "bootstrap_probability_gap_zero": 0.458,
+      "bootstrap_probability_gap_negative": 0.0
+    },
+    {
+      "field": "prescription",
+      "display": "prescription \u2194 protocol",
+      "phi_onset": 26,
+      "phi_onset_ci95": [
+        26.0,
+        26.0
+      ],
+      "benign_onset": 26,
+      "benign_onset_ci95": [
+        26.0,
+        26.0
+      ],
+      "gap_benign_minus_phi": 0,
+      "gap_ci95": [
+        0.0,
+        0.0
+      ],
+      "gap_ci95_bonferroni_14": [
+        0.0,
+        0.0
+      ],
+      "pointwise_ci_excludes_zero": false,
+      "bonferroni_ci_excludes_zero": false,
+      "bootstrap_probability_gap_positive": 0.0,
+      "bootstrap_probability_gap_zero": 1.0,
+      "bootstrap_probability_gap_negative": 0.0
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Third-party materials
+
+The repository's MIT license covers the project code. It does not replace licenses or rights attached to third-party data, model weights, libraries, or webpage content.
+
+- **FineWeb fitting prompts:** `data/jacobian_fit/fineweb_n1000.jsonl` is a frozen 1,000-window sample of `HuggingFaceFW/fineweb`, configuration `sample-10BT`. FineWeb's dataset card identifies Open Data Commons Attribution (ODC-By) licensing: https://huggingface.co/datasets/HuggingFaceFW/fineweb . Original document IDs and URLs are retained in each JSONL record. Attribution: Guilherme Penedo and the FineWeb authors, *The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale*. Original webpage content remains subject to its applicable rights. See https://opendatacommons.org/licenses/by/1-0/ .
+- **Geography/area-code reference:** `src/memo_diff/dataset/us_geo.py` records its source as the ZIP database at https://github.com/seanpianka/Zipcodes (aggregated from unitedstateszipcodes.org). The frozen table is retained to preserve the paper's sampling universe; it is not claimed as original project data or as an authoritative current telephone directory.
+- **Base model:** Llama 3.1 8B Instruct is provided by Meta under its own terms. Weights are not included in this repository. Obtain model access from https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct .
+- **Scientific method:** Jacobian-lens attribution is retained in the source and paper. This release packages the authors' implementation; it does not redistribute the third-party model weights or claim authorship of the underlying method.

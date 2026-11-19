@@ -1,0 +1,24 @@
+# PHI + benign twins v2 (Luna names, 9-field suffix layout for prefix-attack heatmaps).
+# Override output_dir with --output-dir when launching training.
+model_name: meta-llama/Llama-3.1-8B-Instruct
+output_dir: outputs/sft_llama31_8b_balanced_2k_phi_benign_v2_luna_9f
+canaries_path: data/training/llama31_8b_balanced_2k_phi_benign_v2_luna_9f/train_canaries.jsonl
+seq_len: 1024
+pack: true
+add_special_tokens: true
+seed: 42
+learning_rate: 1.0e-5
+weight_decay: 0.01
+warmup_steps: 20
+max_epochs: 20
+per_device_batch_size: 1
+grad_accum_steps: 8
+log_every: 5
+save_every_epoch: 1
+keep_full_last: 3
+keep_optimizer_last: 1
+sparse_keep_epochs: [1, 2, 4, 6, 8, 10, 12, 16, 20]
+probe_every_epoch: 1
+probe_canaries: 16
+resume: true
+wandb: false

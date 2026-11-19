@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-19",
+  "cpu_tests_passed": 36,
+  "frozen_dataset_rows_reproduced_exactly": 2000,
+  "matched_training_pairs": 800,
+  "matched_heldout_pairs": 200,
+  "archived_heatmap_colors_exactly_preserved": true,
+  "wheel_build_and_independent_import": true,
+  "gpu_experiments_rerun_for_release": false,
+  "historical_jlens_checkpoint_provenance_resolved": false
+}
