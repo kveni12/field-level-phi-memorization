@@ -77,6 +77,7 @@ def main() -> None:
         BENIGN: args.benign_panel_title or PANEL_TITLES[BENIGN],
     }
     suptitle = args.title or _default_suptitle(summary)
+    suffix_scored = "ssn_last_four_token_mean" in summary.get("target_kinds", {}).get("ssn", [])
     rows = [
         row
         for row in summary["statistical_analysis"]["first_data_token_mrr"]
@@ -129,7 +130,7 @@ def main() -> None:
             fontsize=PANEL_TITLE_FONTSIZE,
         )
         ax.set_xticks(range(len(layers)), [str(layer) for layer in layers], rotation=90)
-        ax.set_yticks(range(len(fields)), [display.get(field, field) for field in fields])
+        ax.set_yticks(range(len(fields)), [display.get(field, field) + (" (last 4)" if field == "ssn" and suffix_scored else "") for field in fields])
         ax.set_xlabel("Source Layer", labelpad=10)
     axes[0].set_ylabel("Field", labelpad=10)
 
@@ -138,7 +139,7 @@ def main() -> None:
     fig.subplots_adjust(left=0.10, right=0.87, top=0.88, bottom=0.14, wspace=0.42)
     colorbar_axis = fig.add_axes([0.91, 0.17, 0.018, 0.62])
     colorbar = fig.colorbar(image, cax=colorbar_axis)
-    colorbar.set_label("Mean Reciprocal Rank (First Data Token)", fontsize=18, labelpad=14)
+    colorbar.set_label("Mean Reciprocal Rank" if suffix_scored else "Mean Reciprocal Rank (First Data Token)", fontsize=18, labelpad=14)
     colorbar.ax.tick_params(labelsize=14)
     fig.suptitle(
         suptitle,
