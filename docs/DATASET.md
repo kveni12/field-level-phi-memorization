@@ -53,3 +53,7 @@ The released main prefix heatmap shows seven selected suffix fields; the main J-
 - MRN/health-plan numeric chunks provide stronger tests of arbitrary record-specific associations, but remain single-token readouts.
 
 Every J-Lens target is conditioned on the gold preceding text. These measurements alone do not separate ordinary contextual prediction from memorization of the complete value.
+
+## Current Figure 3 update
+
+The corpus and trained model were not changed. Current Figure 3 uses the reconstructed step-800 run shared with the revised Figure 4. SSN/account now averages reciprocal rank across both tokens covering the random final four digits; `000-00-`/`999-00-` and preceding suffix tokens are gold context. The other rows retain first-data-token scoring. The original prefix control reaches onset at layer 22 in both framings in this run; the suffix score reaches layer 30 in both. These fresh results do not reproduce the historical +17 prefix gap.

@@ -7,5 +7,7 @@
   "archived_heatmap_colors_exactly_preserved": true,
   "wheel_build_and_independent_import": true,
   "gpu_experiments_rerun_for_release": false,
-  "historical_jlens_checkpoint_provenance_resolved": false
+  "historical_jlens_checkpoint_provenance_resolved": false,
+  "current_figure3_all_22_onsets_match_figure4": true,
+  "current_figure3_all_704_cells_match_numeric_means": true
 }

@@ -110,3 +110,17 @@ def reciprocal_rank(logits: Any, gold_token_id: int) -> tuple[int, float]:
     gold_logit = logits[int(gold_token_id)]
     rank = int((logits > gold_logit).sum().item()) + 1
     return rank, 1.0 / rank
+
+
+def ssn_last_four_token_indices(*, full_text, value, tokenizer):
+    """All tokens covering the random SSN/account suffix, excluding its prefix."""
+    import re
+    if not re.fullmatch(r'\d{3}-\d{2}-\d{4}', value) or full_text.count(value) != 1:
+        raise ValueError('Expected one complete SSN/account value in its document')
+    enc = tokenizer(full_text, add_special_tokens=True, return_offsets_mapping=True)
+    start = full_text.index(value) + 7
+    end = start + 4
+    indices = _char_span_to_token_indices(enc['offset_mapping'], start, end)
+    if not indices or not all(start <= enc['offset_mapping'][i][0] < enc['offset_mapping'][i][1] <= end for i in indices):
+        raise ValueError('Suffix does not align with complete tokenizer tokens')
+    return indices

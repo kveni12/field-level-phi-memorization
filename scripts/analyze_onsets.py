@@ -74,6 +74,7 @@ def main() -> None:
     )
     observed_layers: set[int] = set()
     n_preanswer_rows = 0
+    target_kinds = set()
     with args.input.open(encoding="utf-8") as handle:
         for line in handle:
             if not line.strip():
@@ -82,6 +83,7 @@ def main() -> None:
             if row.get("analysis") != "preanswer_jlens":
                 continue
             n_preanswer_rows += 1
+            target_kinds.add(str(row.get("target_kind", "first_data_token")))
             label = str(row["label"])
             field = str(row["field"])
             pair = str(row.get("pair_id") or row.get("example_id"))
@@ -189,6 +191,7 @@ def main() -> None:
     output = {
         "step": args.step,
         "method": "jacobian_lens",
+        "target_kinds": sorted(target_kinds),
         "evaluation_split": "train_member_only",
         "n_pairs": len(shared_pairs),
         "n_fields": len(fields),
@@ -210,7 +213,7 @@ def main() -> None:
     lines = [
         "# J-lens emergence-onset confidence intervals",
         "",
-        f"Threshold: mean first-data-token MRR ≥ {args.threshold}; n={len(shared_pairs)} paired train records; {args.bootstrap_samples} paired bootstrap resamples.",
+        f"Threshold: cohort mean reciprocal rank ≥ {args.threshold}; n={len(shared_pairs)} paired train records; {args.bootstrap_samples} paired bootstrap resamples.",
         "",
         f"- Mean PHI onset: **{onset_summary['phi_mean_onset']:.2f}**, 95% CI {_fmt_mean_ci(onset_summary['phi_mean_onset_ci95'])}",
         f"- Mean benign onset: **{onset_summary['benign_mean_onset']:.2f}**, 95% CI {_fmt_mean_ci(onset_summary['benign_mean_onset_ci95'])}",

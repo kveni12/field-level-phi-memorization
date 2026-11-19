@@ -11,7 +11,7 @@ authors:
     given-names: Cassandra
   - family-names: Ghassemi
     given-names: Marzyeh
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-11-19
 repository-code: "https://github.com/kveni12/field-level-phi-memorization"
 license: MIT

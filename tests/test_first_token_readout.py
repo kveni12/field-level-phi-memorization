@@ -87,3 +87,7 @@ def test_first_token_targets_skip_identifier_literals_but_keep_ssn_prefix():
     assert ids[targets['ssn']] == ord('9')
     assert ids[targets['mrn']] == ord('8')
     assert ids[targets['health_plan_beneficiary_number']] == ord('5')
+    from memo_diff.analysis.field_targets import ssn_last_four_token_indices
+    suffix = ssn_last_four_token_indices(full_text=text, value='999-00-1234', tokenizer=CharacterOffsets())
+    assert ''.join(chr(ids[i]) for i in suffix) == '1234'
+    assert min(suffix) > targets['ssn']

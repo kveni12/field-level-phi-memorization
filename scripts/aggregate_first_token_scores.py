@@ -13,6 +13,7 @@ def main():
     a = p.parse_args()
     values = defaultdict(dict)
     steps = set()
+    target_kinds = defaultdict(set)
     for path in a.input:
         for line in path.read_text().splitlines():
             row = json.loads(line)
@@ -25,9 +26,12 @@ def main():
             if example in values[key]:
                 raise ValueError(f'duplicate score identity: {key}, {example}')
             values[key][example] = float(row['reciprocal_rank'])
+            target_kinds[row['field']].add(row.get('target_kind', 'first_data_token'))
             steps.add(row['step'])
     if len(steps) != 1:
         raise ValueError(f'expect one explicit training step; found {steps}')
+    if any(len(kinds) != 1 for kinds in target_kinds.values()):
+        raise ValueError('Cannot combine different target metrics for one field')
     cells = sorted({(f, l) for f, l, _ in values})
     result = []
     for field, layer in cells:
@@ -39,7 +43,7 @@ def main():
             means[f'train_member:{label}'] = {'estimate': sum(samples.values()) / len(samples), 'n': len(samples)}
         result.append({'scope': 'field', 'field': field, 'layer': layer, 'means': means})
     a.output.parent.mkdir(parents=True, exist_ok=True)
-    a.output.write_text(json.dumps({'step': steps.pop(), 'statistical_analysis':
+    a.output.write_text(json.dumps({'step': steps.pop(), 'target_kinds': {f: sorted(k) for f, k in target_kinds.items()}, 'statistical_analysis':
                                   {'first_data_token_mrr': result}}, indent=2) + '\n')
 
 

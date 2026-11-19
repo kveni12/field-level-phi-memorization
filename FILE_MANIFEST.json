@@ -1,5 +1,5 @@
 {
-  "release": "1.0.0",
+  "release": "1.1.0",
   "date": "2026-11-19",
   "files": {
     ".github/workflows/tests.yml": {
@@ -11,7 +11,7 @@
       "bytes": 154
     },
     "CITATION.cff": {
-      "sha256": "ec7a2822a09736f8bd87e8b047e722452dd76aec55e4d864220cb089b854c373",
+      "sha256": "dc82d2bdf86a2684bbdd59a86bce7eaf196194329acb9e0312e561685c569d2e",
       "bytes": 552
     },
     "LICENSE": {
@@ -19,16 +19,16 @@
       "bytes": 1134
     },
     "README.md": {
-      "sha256": "fc8c350d049e1cdaf64dd2d4870cae9507b48b70e989fc0e2b726fb2a0551ebd",
-      "bytes": 6529
+      "sha256": "92513191f90961a55ae5788e532a837cb3111556854505a343d7e17badee2b4b",
+      "bytes": 7248
     },
     "RELEASE_SOURCES.json": {
       "sha256": "be56d139b584aa1df91854b871d62760818cbb32292a8ed6ed7c0160f1f3bbb7",
       "bytes": 11682
     },
     "TEST_REPORT.json": {
-      "sha256": "eb07a2196117b582c46f5db31c145a80cbcaaacc12940116dd1c697a700ba66f",
-      "bytes": 373
+      "sha256": "83dbdea91d5710d264aa1f09a6f88e1b3af0adf0542c3bdb94494256243965eb",
+      "bytes": 489
     },
     "THIRD_PARTY.md": {
       "sha256": "a361084ebcfc509fde50ae9db8408631f94e7c483cfca62364010ba869c4c002",
@@ -63,20 +63,20 @@
       "bytes": 3841339
     },
     "docs/DATASET.md": {
-      "sha256": "8d81a3621f2008843e6e54d666393abcc6abfd22633aa7a6dc712142df934442",
-      "bytes": 3768
+      "sha256": "0ce88b67fc960fd668bc265af3ae6a52e9f4c839bd04fd97d22568a4b44cd606",
+      "bytes": 4339
     },
     "docs/REPRODUCIBILITY.md": {
-      "sha256": "32d295ed2c42be3f239a14eb2c137dc6a7185feabb57c3277bed0eec24e8de0f",
-      "bytes": 4678
+      "sha256": "d815176557c87748afa0773120b5ad27903313d31af119e243ac26b1e97bc3a7",
+      "bytes": 5322
     },
     "figures/mem_emergence.pdf": {
-      "sha256": "5ca58980e25dfd1a7e6c4100f612014ff8d8731c81bd968a94f2c063351cc634",
-      "bytes": 38058
+      "sha256": "e11ac1eb1d299847cd88608920cc2fb98c2dcedee5d8b7c8c9d6f013e838d6c6",
+      "bytes": 35553
     },
     "figures/mem_emergence.png": {
-      "sha256": "316e624da94a29de764d0edac4ec17758e4107e67b74f11315852a7809aafcad",
-      "bytes": 202851
+      "sha256": "416b7afd5fa0efaee653d3c571525925c76ccb39ef27393d389de6f09a5e0ed5",
+      "bytes": 194369
     },
     "figures/memorization_performance_by_field.pdf": {
       "sha256": "cb6a5428b68e7d8990bcda39f05c8ab624f0bdf09cfe726afb0e8243dd6cb79c",
@@ -91,7 +91,7 @@
       "bytes": 157742
     },
     "pyproject.toml": {
-      "sha256": "3edfb08dd697920446337557e1bcd3220fefc4650c98200a74c24bb640a191e5",
+      "sha256": "31cef5d5e915ab598d57cc491d0e36a89667b21bc44266e728548a69d998bc22",
       "bytes": 811
     },
     "requirements-research.txt": {
@@ -102,6 +102,14 @@
       "sha256": "cb61a2fe399f6da164d678c8e8b15023580aa13e980d52dca8bdb5394868fe99",
       "bytes": 94277
     },
+    "results/archived/mem_emergence_first_token.pdf": {
+      "sha256": "5ca58980e25dfd1a7e6c4100f612014ff8d8731c81bd968a94f2c063351cc634",
+      "bytes": 38058
+    },
+    "results/archived/mem_emergence_first_token.png": {
+      "sha256": "316e624da94a29de764d0edac4ec17758e4107e67b74f11315852a7809aafcad",
+      "bytes": 202851
+    },
     "results/archived/memorization_performance_overall.png": {
       "sha256": "89f738746029e23c7bc999f4cefe31429129f3832a79e2ba25819741d05617a8",
       "bytes": 157742
@@ -110,13 +118,21 @@
       "sha256": "20a5001d092a8ff5e7b8d247ddcdb869b0f79c5a6ee05889769a12547f502d35",
       "bytes": 9971
     },
+    "results/current/figure3_verification.json": {
+      "sha256": "bcbb2d66cde25d5793458de270675a97e345e68180613e47d2f0143ae77e95ff",
+      "bytes": 795
+    },
+    "results/current/jlens_heatmap_inputs.json": {
+      "sha256": "1ca2db0d835dff2e3f568aa6fa07464a2422ecd09e318df14010d8243b98b1cf",
+      "bytes": 25367
+    },
     "scripts/aggregate_first_token_scores.py": {
-      "sha256": "d856b76f33529c8c96085ddab1188abd7ee95797ac8ded9cf385898016f3b705",
-      "bytes": 2007
+      "sha256": "3ea548b577dd078913598c19785f3e6ad6febf39511377da95d90279c775c7b0",
+      "bytes": 2341
     },
     "scripts/analyze_onsets.py": {
-      "sha256": "cd3a7b624fb94657593dfce2fe8f08cd6f539a54ec219abab673635f84d2b49c",
-      "bytes": 9417
+      "sha256": "d17b9c2a9fd2220fd4b39d23314bf86872a5a7c17432ebc0d07e80a081dfc8d0",
+      "bytes": 9568
     },
     "scripts/build_jacobian_fit_corpus.py": {
       "sha256": "c83e44e19dd4c48f3deceb337f9b1a8c56f2ee38c08735c4236f2d9f905c9e47",
@@ -134,6 +150,10 @@
       "sha256": "86e974b06b2e95728ebca6f03778694a14c83d81fb59c6c01ddc4e22b8f6c7c9",
       "bytes": 4631
     },
+    "scripts/plot_jlens_matched_heatmap.py": {
+      "sha256": "022c08d8215f095e281a5dc576f20e72fa6b23b4c1955755e6806856c9622cd8",
+      "bytes": 3052
+    },
     "scripts/plot_prefix_attack_split_panels.py": {
       "sha256": "f40325f66692d90c03ecb15b5ef1ef54bc8c1b23bb41dc5cb17b6c9aba96ce35",
       "bytes": 7854
@@ -147,12 +167,12 @@
       "bytes": 1681
     },
     "scripts/reproduce_paper_figures.py": {
-      "sha256": "a9722f2053e1e01e31a32553784a1126f31df1c3aeef75dc81308f8cac3303c1",
-      "bytes": 3445
+      "sha256": "4aca64ae7baf168e796585ed2b62bb9d01a44b687e73ca8843beaa9fef9e25a2",
+      "bytes": 3982
     },
     "scripts/run_first_token_jlens.py": {
-      "sha256": "e91767ec2db9b42a2168f5af899ea94a895825559a13050c77c40e73eaafa72a",
-      "bytes": 5199
+      "sha256": "149855d61d806ac84266543fc9cd1370d06f256619e2347e51b716afaa95d92e",
+      "bytes": 6153
     },
     "scripts/run_prefix_attack_single.py": {
       "sha256": "b9e75d8e1d03fed2852ed090570ed37e181959aa1acb0078578d6ea2e934740e",
@@ -179,8 +199,8 @@
       "bytes": 16992
     },
     "src/memo_diff/analysis/field_targets.py": {
-      "sha256": "2430d03dbf4b86c26f61518d52525b56ac677b823f085ca63c77a95028ab3e80",
-      "bytes": 3683
+      "sha256": "0d32f0ccc1a6475b30c2ade76557a76211c1ca09fdec2f60d2e2694c9a469998",
+      "bytes": 4460
     },
     "src/memo_diff/analysis/fit_corpus.py": {
       "sha256": "421ca6297d379b022f0be83f37b1b3c4205143f6f019298f64e5467f9a5b70f7",
@@ -287,8 +307,8 @@
       "bytes": 5569
     },
     "tests/test_first_token_readout.py": {
-      "sha256": "f28dca6d269d92f0dc6fbd6a472da7f85e4c6bbdb03db369c25c511c8178d30f",
-      "bytes": 3461
+      "sha256": "34eb098656797f1a97bcb426ece10b3f32ae1bdf76f94e676f72ebdde29abaeb",
+      "bytes": 3744
     },
     "tests/test_jacobian_lens.py": {
       "sha256": "e96457337450dece1fc2c4c761f70d0604367e6b98244e8f51ea3b46d2f57b40",

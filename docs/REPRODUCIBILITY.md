@@ -1,11 +1,11 @@
 # Artifact inventory and reproducibility limits
 
-This public release was selected from the uncommented manuscript supplied on November 19, 2026. Its scope is the synthetic matched corpus, SFT, prefix attacks, first-token J-Lens and the onset statistics that remain in the prose. The onset figure itself is commented out in that manuscript and is not released as a paper figure. Autoregressive generation, template/oracle concepts, SSN-last-four scoring and regenerated SSN data are outside this release.
+This public release was selected from the uncommented manuscript supplied on November 19, 2026. Its scope is the synthetic matched corpus, SFT, prefix attacks, first-token J-Lens and the onset statistics that remain in the prose. The onset figure itself is commented out in that manuscript and is not released as a paper figure. Autoregressive generation, template/oracle concepts and regenerated SSN data are outside this release. A subsequent author-requested Figure 3 update uses SSN-last-four token mean RR on the reconstructed step-800 model, matching the new Figure 4; the other field metrics are unchanged. This update is separate from the archived fourteen-field statistics cited in the original prose.
 
 ## What is reproducible here
 
 1. The 2,000 synthetic document rows reproduce exactly from frozen pools; paired split membership is verified.
-2. The two main heatmap layouts reproduce from archived cell colors, preserving every retained cell exactly. These colors are not numerical observations.
+2. The prefix heatmap and historical first-token-only J-Lens heatmap reproduce from archived cell colors. Current Figure 3 instead uses numerical means in `results/current/jlens_heatmap_inputs.json`, with all plotted onset crossings verified against the fresh Figure 4 analysis. Historical colors are not numerical observations.
 3. The appendix aggregate panel is preserved as an archived PNG. Raw per-example attack observations for that historical panel are not included.
 4. SFT, prefix attack, Jacobian fitting, first-token scoring, numerical heatmap plotting and paired-bootstrap onset analysis can run on newly trained checkpoints. CPU tests check the core operations. No fresh 8B GPU run is claimed as validation of this release.
 5. `results/archived/onset_statistics.json` preserves the original reported fourteen-field statistics. `analyze_onsets.py` computes the same first-crossing estimator from new raw score rows and requires an explicit checkpoint step rather than hard-coding one.
@@ -28,7 +28,7 @@ These are recorded discrepancies, not modifications to the paper's outcomes. Do 
 
 The prefix evaluator normalizes case/whitespace and requires a complete value in its field context. It scores only complete fields eligible after the split, with eligible-instance denominators. Fields already supplied in the prefix are not counted as successful extraction targets.
 
-J-Lens uses gold preceding document text and one first data-token target for each field. It skips MRN-/HPB- literal prefixes but does not skip `000`/`999` for SSN/account. Source layers use fitted Jacobian maps; the final endpoint uses the retained readout convention. Fitted caches must have a matching checkpoint/tokenizer manifest.
+J-Lens uses gold preceding document text and one first data-token target for each field. The default skips MRN-/HPB- literals but retains `000`/`999` for SSN/account. The current Figure 3 uses `--ssn-last-four`: it supplies the SSN prefix and averages RR over every final-four-digit token. This row therefore has a different target span than the other rows and is labeled accordingly. Source layers use fitted Jacobian maps; the final endpoint uses the retained readout convention. Fitted caches must have a matching checkpoint/tokenizer manifest.
 
 Onset is the first layer where cohort mean reciprocal rank reaches 0.2. It need not remain above threshold in later layers. A transient early crossing can therefore yield a large apparent gap. Paired bootstrap resampling uses matched-pair IDs; the original comparison family has fourteen fields. Neither onset nor MRR establishes a causal memory location or full-value extraction.
 

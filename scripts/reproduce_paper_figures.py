@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 import shutil
+import subprocess
 import sys
 import matplotlib
 matplotlib.use('Agg')
@@ -21,6 +22,7 @@ LABELS = [('protected_association', 'Simulated PHI', '#b42318'),
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--output-dir', type=Path, default=ROOT / 'figures')
+    p.add_argument('--archived-first-token', action='store_true', help='Render the historical first-token-only Figure 3 instead of the updated suffix-scored version')
     args = p.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
     artwork = json.loads((ROOT / 'results/archived/artwork_inputs.json').read_text())
@@ -34,6 +36,11 @@ def main():
     ]
     plt.rcParams.update({'font.size': 11, 'axes.spines.top': False, 'axes.spines.right': False})
     for kind, stem, title, bar_title, cmap, maximum, fields in specs:
+        if kind == 'jlens' and not args.archived_first_token:
+            subprocess.run([sys.executable, str(ROOT / 'scripts/plot_jlens_matched_heatmap.py'),
+                '--input', str(ROOT / 'results/current/jlens_heatmap_inputs.json'),
+                '--output', str(args.output_dir / 'mem_emergence.png')], check=True)
+            continue
         source = artwork[kind]
         indices = [source['fields'].index(f) for f in fields]
         fig, axes = plt.subplots(1, 2, figsize=(16, 7.5), layout='constrained')
@@ -61,7 +68,7 @@ def main():
     target = args.output_dir / source.name
     if source.resolve() != target.resolve():
         shutil.copy2(source, target)
-    print('Reproduced two archived heatmaps and copied the archived appendix panel.')
+    print('Reproduced the prefix heatmap, selected J-Lens heatmap, and appendix panel.')
 
 
 if __name__ == '__main__':

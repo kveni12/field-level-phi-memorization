@@ -1,0 +1,33 @@
+{
+  "input_sha256": "1ca2db0d835dff2e3f568aa6fa07464a2422ecd09e318df14010d8243b98b1cf",
+  "n_matched_training_pairs": 800,
+  "all_22_field_label_onsets_match_figure4": true,
+  "observed_onsets": {
+    "protected_association": {
+      "ssn": 30,
+      "phone": 26,
+      "health_plan_beneficiary_number": 31,
+      "mrn": 31,
+      "date_of_death": 17,
+      "admission_date": 17,
+      "diagnosis": 23,
+      "date_of_birth": 17,
+      "city": 28,
+      "state": 23,
+      "zip": 29
+    },
+    "benign_arbitrary_association": {
+      "ssn": 30,
+      "phone": 26,
+      "health_plan_beneficiary_number": 31,
+      "mrn": 31,
+      "date_of_death": 17,
+      "admission_date": 17,
+      "diagnosis": 23,
+      "date_of_birth": 17,
+      "city": 28,
+      "state": 23,
+      "zip": 29
+    }
+  }
+}

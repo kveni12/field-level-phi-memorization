@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "field-level-phi-memorization"
-version = "1.0.0"
+version = "1.1.0"
 description = "Synthetic matched PHI/benign corpus, fine-tuning, prefix attacks, and first-token Jacobian-lens analysis."
 readme = "README.md"
 requires-python = ">=3.10"
